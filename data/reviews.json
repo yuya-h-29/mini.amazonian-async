@@ -1,0 +1,62 @@
+[
+  {
+    "productId": 1,
+    "userId": 1,
+    "text": "Spicy",
+    "rating": 18
+  },
+  {
+    "productId": 1,
+    "userId": 2,
+    "text": "This has been life changing. I'm not sure if I can ever see myself the same way.",
+    "rating": 5
+  },
+  {
+    "productId": 2,
+    "userId": 1,
+    "text": "How does this work?",
+    "rating": 0
+  },
+  {
+    "productId": 2,
+    "userId": 2,
+    "text": "They are a bit on the wonky side, but tastes like natto.",
+    "rating": 5
+  },
+  {
+    "productId": 3,
+    "userId": 1,
+    "text": "I can't get enough of them!",
+    "rating": 5
+  },
+  {
+    "productId": 3,
+    "userId": 2,
+    "text": "Super frustrated with this product. They don't actually write! They are just sugar.",
+    "rating": 1
+  },
+  {
+    "productId": 4,
+    "userId": 3,
+    "text": "Best to throw at Malfoy and Mr. Filch.",
+    "rating": 4
+  },
+  {
+    "productId": 4,
+    "userId": 2,
+    "text": "Be careful! One went off accidentally in my bag and it smelled like I poo'ed in my bag all day.",
+    "rating": 5
+  },
+  {
+    "productId": 5,
+    "userId": 1,
+    "text": "Blimey mate! These are awesome.",
+    "rating": 4
+  },
+  {
+    "productId": 5,
+    "userId": 3,
+    "text": "Ahoy!",
+    "rating": 5
+  }
+]
