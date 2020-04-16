@@ -1,4 +1,6 @@
 const fs = require("fs");
+const util = require("util");
+const pReadFile = util.promisify(fs.readFile);
 const { readFile, produceResult } = require("./helpers");
 
 class ReviewBuilder {
@@ -28,11 +30,48 @@ class ReviewBuilder {
   }
 
   buildReviewsPromises() {
-    // FIXME
+    // readFile("./data/products.json").then((data) =>
+    //   console.log(JSON.parse(data))
+    // );
+
+    return (
+      Promise.all([
+        readFile("./data/products.json"),
+        readFile("./data/reviews.json"),
+        readFile("./data/users.json"),
+      ])
+        .then((data) => {
+          let output = {};
+          output.products = JSON.parse(data[0]);
+          output.reviews = JSON.parse(data[1]);
+          output.users = JSON.parse(data[2]);
+          return output;
+          //data.forEach((datum) => JSON.parse(datum));
+        })
+        // .then((data) => console.log(data));yuya
+        .then((data) => produceResult(data))
+    );
   }
 
   async buildReviewsAsyncAwait() {
     // FIXME
+    async function returnTable() {
+      let allData = await Promise.all([
+        readFile("./data/products.json"),
+        readFile("./data/reviews.json"),
+        readFile("./data/users.json"),
+      ])
+        .then((data) => {
+          let output = {};
+          output.products = JSON.parse(data[0]);
+          output.reviews = JSON.parse(data[1]);
+          output.users = JSON.parse(data[2]);
+          return output;
+        })
+        .then((data) => produceResult(data));
+      return allData;
+    }
+    return returnTable();
   }
 }
 
